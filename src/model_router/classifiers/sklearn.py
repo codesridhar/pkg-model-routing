@@ -1,6 +1,6 @@
 """Trainable text classifier backed by scikit-learn.
 
-Install with ``pip install 'model-tier-router[nlp]'``. The classifier works out of the box with a
+Install with ``pip install 'model-routers[nlp]'``. The classifier works out of the box with a
 small, generic dataset bundled in the package. Consuming applications can extend or replace that
 dataset because tier boundaries ultimately depend on their models and quality criteria.
 """
@@ -22,7 +22,7 @@ try:
     from sklearn.pipeline import Pipeline
 except ImportError as exc:  # pragma: no cover - exercised in an environment without the extra
     raise ImportError(
-        "TfidfClassifier requires the NLP extra: pip install 'model-tier-router[nlp]'"
+        "TfidfClassifier requires the NLP extra: pip install 'model-routers[nlp]'"
     ) from exc
 
 

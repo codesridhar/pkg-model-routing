@@ -15,3 +15,8 @@ changes here.
 - Evaluation metrics for exact, under-, over-, and unsatisfied routing.
 - Interactive FastAPI testing workbench through the `demo` extra.
 - CI, distribution validation, and PyPI Trusted Publishing workflow.
+
+### Changed
+
+- The installable PyPI distribution is named `model-routers`; the Python import remains
+  `model_router`.

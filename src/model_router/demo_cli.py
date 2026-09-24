@@ -12,7 +12,7 @@ def main() -> None:
         if exc.name in {"fastapi", "uvicorn"}:
             raise SystemExit(
                 "The testing app requires optional dependencies. "
-                "Install them with: pip install 'model-tier-router[demo]'"
+                "Install them with: pip install 'model-routers[demo]'"
             ) from exc
         raise
     run_demo()

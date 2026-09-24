@@ -31,10 +31,9 @@ set separate release thresholds rather than optimizing accuracy alone.
 
 ## Train the optional local classifier
 
-Install `model-tier-router[nlp]`, convert only the training split to `TrainingExample`, and inject
+Install `model-routers[nlp]`, convert only the training split to `TrainingExample`, and inject
 the resulting classifier. Re-run `evaluate()` on the untouched test split. Do not interpret raw
 logistic-regression probability as calibrated operational confidence until calibration has been
 measured on representative data.
 
 Re-evaluate when model assignments, prompts, tools, user populations, or routing policy changes.
-

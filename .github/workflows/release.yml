@@ -48,7 +48,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/p/model-tier-router
+      url: https://pypi.org/p/model-routers
     permissions:
       id-token: write
     steps:

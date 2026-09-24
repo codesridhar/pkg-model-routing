@@ -81,7 +81,7 @@ def create_app(router: Router | None = None) -> FastAPI:
     app = FastAPI(
         title="Model Routing Workbench",
         version="0.1.0",
-        description="Interactive test surface for model-tier-router.",
+        description="Interactive test surface for model-routers.",
     )
 
     @app.get("/", response_class=HTMLResponse, include_in_schema=False)

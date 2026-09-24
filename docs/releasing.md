@@ -3,7 +3,7 @@
 ## Prerequisites
 
 - A public GitHub repository with branch protection enabled.
-- A PyPI project or pending trusted publisher for `model-tier-router`.
+- A PyPI project or pending trusted publisher for `model-routers`.
 - A GitHub environment named `pypi` with required-reviewer protection.
 - PyPI Trusted Publishing configured for `.github/workflows/release.yml` and environment `pypi`.
 
@@ -20,9 +20,12 @@ Publishing begins only when the GitHub release is marked published. The workflow
 tests the tagged source, checks both distributions, and passes the artifacts to a separate OIDC
 publishing job. No long-lived PyPI token is stored.
 
+The distribution name configured in PyPI is `model-routers`; the import namespace remains
+`model_router`. PyPI normalizes the distribution name to `model-routers`, while wheel filenames
+use `model_routers`.
+
 ## Verify
 
 Install the exact version into a clean environment from PyPI, import `model_router`, run a basic
 route, and confirm the PyPI provenance attestation. If verification fails, yank the affected file
 on PyPI, document the reason, fix forward with a new version, and never reuse a released version.
-
