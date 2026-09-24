@@ -1,6 +1,6 @@
-# Model Tier Router
+# Model Routers
 
-`model-tier-router` is a typed, provider-independent Python library that selects the least capable
+`model-routers` is a typed, provider-independent Python library that selects the least capable
 configured model expected to complete a request. It returns `fast`, `medium`, `high`, or `max`, a
 concrete application model ID, and reason codes that explain the decision.
 
@@ -13,17 +13,20 @@ SDKs, credentials, execution, retries, and observability.
 ## Installation
 
 ```bash
-python -m pip install model-tier-router
+python -m pip install model-routers
 ```
 
 Optional features are installed separately:
 
 ```bash
-python -m pip install 'model-tier-router[nlp]'   # local trainable classifier
-python -m pip install 'model-tier-router[demo]'  # interactive testing app
+python -m pip install 'model-routers[nlp]'   # local trainable classifier
+python -m pip install 'model-routers[demo]'  # interactive testing app
 ```
 
 Python 3.10 through 3.13 are supported.
+
+The PyPI distribution uses the plural name `model-routers`. Python code imports the stable,
+singular module namespace `model_router`.
 
 ## Quick start
 
@@ -183,7 +186,7 @@ See [the evaluation guide](docs/evaluation.md) for dataset construction and rele
 ## Interactive workbench
 
 ```bash
-python -m pip install 'model-tier-router[demo]'
+python -m pip install 'model-routers[demo]'
 model-router-demo
 ```
 
@@ -204,7 +207,7 @@ The cases are stored as editable JSON Lines in `examples/test_queries.jsonl`.
 
 ```bash
 git clone <repository-url>
-cd model-tier-router
+cd pkg-model-routing
 python -m pip install -e '.[dev,demo,nlp]'
 ruff format --check .
 ruff check .

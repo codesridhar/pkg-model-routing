@@ -3,7 +3,7 @@ requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "model-tier-router"
+name = "model-routers"
 version = "0.1.0"
 description = "Provider-independent routing of user requests to model capability tiers"
 readme = "README.md"
@@ -25,6 +25,11 @@ classifiers = [
   "Topic :: Software Development :: Libraries :: Python Modules",
   "Typing :: Typed",
 ]
+
+[project.urls]
+Homepage = "https://github.com/codesridhar/pkg-model-routing"
+Repository = "https://github.com/codesridhar/pkg-model-routing.git"
+Issues = "https://github.com/codesridhar/pkg-model-routing/issues"
 
 [project.optional-dependencies]
 dev = [
