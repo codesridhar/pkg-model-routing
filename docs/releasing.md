@@ -20,6 +20,11 @@ Publishing begins only when the GitHub release is marked published. The workflow
 tests the tagged source, checks both distributions, and passes the artifacts to a separate OIDC
 publishing job. No long-lived PyPI token is stored.
 
+The release tag must exactly match `v<project.version>` and both `project.version` and
+`model_router.__version__` must agree. The workflow stops before building or publishing when any
+of these values differ. Concurrent runs for the same release tag are serialized, and successfully
+built distributions are retained as GitHub artifacts for seven days.
+
 The distribution name configured in PyPI is `model-routers`; the import namespace remains
 `model_router`. PyPI normalizes the distribution name to `model-routers`, while wheel filenames
 use `model_routers`.
