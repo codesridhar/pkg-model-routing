@@ -20,3 +20,5 @@ changes here.
 
 - The installable PyPI distribution is named `model-routers`; the Python import remains
   `model_router`.
+- The PyPI workflow validates release tags against both package version declarations and retains
+  verified distributions as short-lived GitHub artifacts before publishing.
